@@ -1,7 +1,43 @@
-# Use this workspace to collaborate
 workspace:
   id: 776a457c-2dd3-4794-8099-33bb608d5e6e
-
 localResources:
   specs:
     - ../src/main/proto/traceability.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/binlog/v1/binarylog.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/channelz/v1/channelz.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/health/v1/health.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/reflection/v1/reflection.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/reflection/v1alpha/reflection.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/apps/card/v1/card.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/cloud/audit/audit_log.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/cloud/extended_operations.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/cloud/location/locations.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/geo/type/viewport.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/logging/type/http_request.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/longrunning/operations.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/rpc/code.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/rpc/context/attribute_context.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/shopping/type/types.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/type/calendar_period.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/protobuf-java-3.25.9-7447b5d3c85e33a7ae9f5faaa3f3c901ca286b47/google/protobuf/any.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/api/annotations.proto
+resourceNameMappings:
+  specs:
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/binlog/v1/binarylog.proto: binarylog.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/channelz/v1/channelz.proto: channelz.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/health/v1/health.proto: health.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/reflection/v1/reflection.proto: reflection.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/grpc-services-1.83.1-15598d7c9d7d75e764be3946ace067bab2b5677c/grpc/reflection/v1alpha/reflection.proto: reflection.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/apps/card/v1/card.proto: card.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/cloud/audit/audit_log.proto: audit_log.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/cloud/extended_operations.proto: extended_operations.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/cloud/location/locations.proto: locations.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/geo/type/viewport.proto: viewport.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/logging/type/http_request.proto: http_request.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/longrunning/operations.proto: operations.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/rpc/code.proto: code.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/rpc/context/attribute_context.proto: attribute_context.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/shopping/type/types.proto: types.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/type/calendar_period.proto: calendar_period.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/protobuf-java-3.25.9-7447b5d3c85e33a7ae9f5faaa3f3c901ca286b47/google/protobuf/any.proto: any.proto
+    - ../target/protobuf-maven-plugin/generate/generate/archives/proto-google-common-protos-2.64.1-6b61c9b4920c2c5c775a731577ecbf3e97a5e6f6/google/api/annotations.proto: annotations.proto

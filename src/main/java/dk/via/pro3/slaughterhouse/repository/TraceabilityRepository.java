@@ -33,27 +33,33 @@ public class TraceabilityRepository {
     return Boolean.TRUE.equals(exists);
   }
 
-  /** Registration numbers of all animals that contributed parts to the product. */
+  /**
+   * Registration numbers of all animals that may be part of the product:
+   * product -> trays it was packed from -> parts in those trays -> animals.
+   */
   public List<String> findAnimalRegistrationsByProduct(long productId) {
     String sql = """
                 SELECT DISTINCT a.registration_number
-                FROM product_part pp
-                JOIN part p   ON p.part_id = pp.part_id
+                FROM product_tray pt
+                JOIN part p   ON p.tray_id = pt.tray_id
                 JOIN animal a ON a.animal_id = p.animal_id
-                WHERE pp.product_id = ?
+                WHERE pt.product_id = ?
                 ORDER BY a.registration_number
                 """;
     return jdbcTemplate.queryForList(sql, String.class, productId);
   }
 
-  /** All products that contain at least one part from the animal. */
+  /**
+   * All products that may contain parts of the animal:
+   * animal -> its parts -> the trays they are in -> products packed from those trays.
+   */
   public List<ProductRecord> findProductsByAnimal(String registrationNumber) {
     String sql = """
                 SELECT DISTINCT pr.product_id, pr.description
                 FROM animal a
                 JOIN part p          ON p.animal_id = a.animal_id
-                JOIN product_part pp ON pp.part_id = p.part_id
-                JOIN product pr      ON pr.product_id = pp.product_id
+                JOIN product_tray pt ON pt.tray_id = p.tray_id
+                JOIN product pr      ON pr.product_id = pt.product_id
                 WHERE a.registration_number = ?
                 ORDER BY pr.product_id
                 """;
