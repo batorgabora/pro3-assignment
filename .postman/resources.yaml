@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 776a457c-2dd3-4794-8099-33bb608d5e6e
+
+localResources:
+  specs:
+    - ../src/main/proto/traceability.proto

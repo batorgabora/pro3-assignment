@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package dk.via.pro3.slaughterhouse.generated; // add to .gitignore
+
+service TraceabilityService {
+  // All animals (registration numbers) that contributed parts to a product
+  rpc GetAnimalsByProduct(GetAnimalsByProductRequest) returns (AnimalsResponse);
+  // All products that contain parts from a given animal
+  rpc GetProductsByAnimal(GetProductsByAnimalRequest) returns (ProductsResponse);
+}
+
+// Request: which product do we want the animals for?
+message GetAnimalsByProductRequest {
+  int64 product_id = 1;
+}
+
+// Request: which animal (registration number) do we want the products for?
+message GetProductsByAnimalRequest {
+  string registration_number = 1;
+}
+
+// Response: registration numbers of all animals involved in the product
+message AnimalsResponse {
+  repeated string registration_numbers = 1;
+}
+
+message Product {
+  int64 product_id = 1;
+  string description = 2;
+}
+
+// Response: all products the animal has been involved in
+message ProductsResponse {
+  repeated Product products = 1;
+}
